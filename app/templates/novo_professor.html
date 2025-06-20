@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Novo Professor</title>
+  </head>
+  <body>
+    <h1>Cadastrar Novo Professor</h1>
+    <form method="POST">
+      Nome: <input type="text" name="nome" required /><br />
+      Departamento:
+      <select name="departamento">
+        <option value="Polícia Penal">Polícia Penal</option>
+        <option value="Socioeducativo">Socioeducativo</option></select
+      ><br />
+      <button type="submit">Cadastrar</button>
+    </form>
+    <a href="{{ url_for('listar_professores') }}">Voltar</a>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Disciplinas</title>
+  </head>
+  <body>
+    <h1>Disciplinas</h1>
+    <a href="{{ url_for('nova_disciplina') }}">Cadastrar Nova Disciplina</a>
+    <ul>
+      {% for disc in disciplinas %}
+      <li>{{ disc.nome }}</li>
+      {% else %}
+      <li>Sem disciplinas cadastradas.</li>
+      {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Voltar</a>
+  </body>
+</html>

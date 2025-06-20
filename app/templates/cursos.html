@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cursos</title>
+  </head>
+  <body>
+    <h1>Cursos</h1>
+    <a href="{{ url_for('novo_curso') }}">Cadastrar Novo Curso</a>
+    <ul>
+      {% for curso in cursos %}
+      <li>{{ curso.nome }} - Tipo: {{ curso.tipo }}</li>
+      {% else %}
+      <li>Sem cursos cadastrados.</li>
+      {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Voltar</a>
+  </body>
+</html>

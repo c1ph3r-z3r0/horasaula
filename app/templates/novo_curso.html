@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Novo Curso</title>
+  </head>
+  <body>
+    <h1>Cadastrar Novo Curso</h1>
+    <form method="POST">
+      Nome: <input type="text" name="nome" required /><br />
+      Tipo:
+      <select name="tipo">
+        <option value="Formação Profissional">Formação Profissional</option>
+        <option value="Formação Continuada">Formação Continuada</option></select
+      ><br />
+      <button type="submit">Cadastrar</button>
+    </form>
+    <a href="{{ url_for('listar_cursos') }}">Voltar</a>
+  </body>
+</html>

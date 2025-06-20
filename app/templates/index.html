@@ -1,0 +1,18 @@
+<!-- app/templates/index.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Início</title>
+  </head>
+  <body>
+    <h1>Sistema de Controle de Aulas</h1>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('listar_professores') }}">Professores</a></li>
+        <li><a href="{{ url_for('listar_disciplinas') }}">Disciplinas</a></li>
+        <li><a href="{{ url_for('listar_cursos') }}">Cursos</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

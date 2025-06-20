@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Professores</title>
+  </head>
+  <body>
+    <h1>Professores</h1>
+    <a href="{{ url_for('novo_professor') }}">Cadastrar Novo Professor</a>
+    <ul>
+      {% for prof in professores %}
+      <li>
+        {{ prof.nome }} - {{ prof.departamento }} - Horas ministradas: {{
+        prof.horas_ministradas }}
+      </li>
+      {% else %}
+      <li>Sem professores cadastrados.</li>
+      {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Voltar</a>
+  </body>
+</html>
